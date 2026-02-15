@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "DeepWiki One-Tap Markdown Exporter",
+  "version": "1.0.0",
+  "description": "DeepWikiの全ページをワンタップでMarkdown形式にエクスポートし、NotebookLMへの橋渡しを行います。",
+  "permissions": [],
+  "host_permissions": [
+    "https://app.devin.ai/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://app.devin.ai/*"],
+      "js": ["turndown.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {}
+}
